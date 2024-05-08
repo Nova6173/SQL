@@ -1,4 +1,5 @@
 package se.Lexicon.model;
+import java.util.regex.Pattern;
 
 // City class represents information about a city
 public class City {
@@ -23,10 +24,26 @@ public class City {
         this.countryCode = countryCode;
         this.district = district;
         this.population = population;
+        validateData();
+    }
+    // Method to validate indata
+    public boolean validateData() {
+        // validate that population is greater than 0
+        if (population <= 0) {
+            System.out.println ("Population must be greater than 0");
+            return false;
+        }
+        // validate countrycode
+        if (!Pattern.matches("[A-Z]{2}", countryCode)) {
+            System.out.println("Country code must be 2 uppercase letters" + countryCode);
+
+        }
+        return false;
     }
 
+
     // Getters and setters
-    // Getter methods
+
     public int getId() {
         return id;
     }

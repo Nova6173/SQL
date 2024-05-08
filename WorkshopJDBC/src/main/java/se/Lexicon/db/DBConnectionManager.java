@@ -7,7 +7,7 @@ import java.sql.SQLException;
 // Class for managing database connection
 public class DBConnectionManager {
     private static final String JDBC_USER = "root"; // Database username
-    private static final String JDBC_PWD = "1234"; // Database password
+    private static final String JDBC_PWD = "Draken6173"; // Database password
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/world"; // Database URL
 
     // Method to establish a database connection
